@@ -6,17 +6,20 @@ let departmentName = 'Comedy Writing';
 let teacherRating = [3.4, 5.0, 4.0];
 
 //TEACHER FUNCTIONS
-const getRatingAvg = teacherRating => {
+const getRatingAvg = ratingsArr => {
     let ratingSum = 0;
     let ratingAvg;
-    for (let i = 0; i < teacherRating.length; i++) {
-      ratingSum = ratingSum + teacherRating[i];
+    for (let i = 0; i < ratingsArr.length; i++) {
+      ratingSum = ratingSum + ratingsArr[i];
     }
-    ratingAvg = ratingSum/teacherRating.length;
-    return ratingAvg.toFixed(2);
+    ratingAvg = ratingSum/ratingsArr.length;
+    return ratingAvg.toFixed(1);
 }
 
-
+const addTeacherRating = (ratingsArr, newRating) => {
+    ratingsArr.push(newRating);
+    return ratingsArr;
+}
 
 //STUDENT PAGE DATA
 
