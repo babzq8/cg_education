@@ -3,11 +3,20 @@
 //variable declaration
 let teacherName = 'Liz Lemon';
 let departmentName = 'Comedy Writing';
-let ratingOne = '3.4';
-let ratingTwo = '5.0';
-let ratingThree = '4.0';
-let ratingSum = parseFloat(ratingOne) + parseFloat(ratingTwo) + parseFloat(ratingThree);
-let avgRating = (ratingSum / 3).toFixed(5);
+let teacherRating = [3.4, 5.0, 4.0];
+
+//TEACHER FUNCTIONS
+const getRatingAvg = teacherRating => {
+    let ratingSum = 0;
+    let ratingAvg;
+    for (let i = 0; i < teacherRating.length; i++) {
+      ratingSum = ratingSum + teacherRating[i];
+    }
+    ratingAvg = ratingSum/teacherRating.length;
+    return ratingAvg.toFixed(2);
+}
+
+
 
 //STUDENT PAGE DATA
 
