@@ -21,6 +21,15 @@ const addTeacherRating = (ratingsArr, newRating) => {
     return ratingsArr;
 }
 
+//TEACHER RATING PROMPT
+let addtlRating = prompt('We would like for you to review. Please enter a rating between 0.0-5.0');
+
+if ((addtlRating >= 0) && (addtlRating <= 5)) {
+  addTeacherRating(teacherRating, addtlRating);
+  getRatingAvg(teacherRating);
+  alert(`Thanks for you review! ${teacherName}\'s average rating is now .`);
+} else {prompt('We would like for you to review. Please enter a rating between 0.0-5.0');}
+
 //STUDENT PAGE DATA
 
 //variable declaration
