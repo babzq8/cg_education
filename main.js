@@ -26,9 +26,10 @@ let addtlRating = prompt('We would like for you to review. Please enter a rating
 
 if ((addtlRating >= 0) && (addtlRating <= 5)) {
   addTeacherRating(teacherRating, addtlRating);
-  getRatingAvg(teacherRating);
-  alert(`Thanks for you review! ${teacherName}\'s average rating is now .`);
+  alert(`Thanks for you review! ${teacherName}\'s average rating is now .` );
 } else {prompt('We would like for you to review. Please enter a rating between 0.0-5.0');}
+
+
 
 //STUDENT PAGE DATA
 
@@ -43,3 +44,6 @@ let studentMajor = 'Music Performance';
 //variable declaration
 let semester = 'Spring 2019';
 let courseName = 'Improv Comedy';
+let courseList = [['Improv Comedy', 'Comedy Writing'],['Acting 101','Comedy Writing'],['Singing 101','Comedy Writing'],['Dance 101','Comedy Writing'],['Basic HTML','Web Development'],['Intro to CSS','Web Development'],['Killing You with JavaScript','Web Development']];
+
+//COURSE FUNCTIONS
