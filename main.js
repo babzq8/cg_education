@@ -22,13 +22,20 @@ const addTeacherRating = (ratingsArr, newRating) => {
 }
 
 //TEACHER RATING PROMPT
-// let addtlRating = prompt('We would like for you to review. Please enter a rating between 0.0-5.0');
-//
-// if ((addtlRating >= 0) && (addtlRating <= 5)) {
-//   addTeacherRating(teacherRating, addtlRating);
-//   alert(`Thanks for you review! ${teacherName}\'s average rating is now .` );
-// } else {prompt('We would like for you to review. Please enter a rating between 0.0-5.0');}
 
+
+// let isValidRating = false;
+// while (!isValidRating) {
+//   let addtlRating = prompt('We would like for you to review . Please enter a rating between 0.0-5.0');
+//   if ((addtlRating >= 0) && (addtlRating <= 5)) {
+//     isValidRating = true;
+//     addTeacherRating(teacherRating, addtlRating);
+//     alert(`Thanks for you review! ${teacherName}\'s average rating is now .` );
+//     break;
+//   } else {
+//     addtlRating;
+//   }
+// }
 
 
 //STUDENT PAGE DATA
@@ -56,3 +63,29 @@ const deptFilter = (courseArr, deptName) => {
   }
   return filtCourse;
 }
+
+const getDeptList = courseArr => {
+  let deptList = new Set();
+  for (let i = 0; i<courseArr.length; i++) {
+    deptList.add(courseArr[i][1]);
+  }
+  return deptList
+}
+
+const filtCourseList = courseList.filter(course => {
+
+})
+
+//COURSE FILTER PROMPT
+
+// let isValidDept = false;
+// while (!isValidDept) {
+//   let searchDept = prompt('Which department are you looking for?');
+//   if (getDeptList(courseList).has(searchDept)) {
+//     isValidDept = true;
+//     alert(`Available courses: `+ );
+//     break;
+//   } else {
+//     searchDept;
+//   }
+// }
