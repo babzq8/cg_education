@@ -56,24 +56,18 @@ let courseList = [['Improv Comedy', 'Comedy Writing'],['Acting 101','Comedy Writ
 
 //COURSE FUNCTIONS
 
-/*
-/combine all of this
-*/
-// const deptFilter = (courseArr, deptName) => {
-//   let filtCourse = [];
-//   for (let i=0; i< courseArr.length; i++) {
-//     if (deptName === courseArr[i][1]) {
-//       filtCourse.push(courseArr[i]);
-//     }
-//   }
-//   return filtCourse;
-// }
+const deptFilter = (courseArr, deptName) => {
+  const filtCourseArr = courseArr.filter(course => {
+    if (course[1] === deptName) {
+      return course;
+    }
+  })
+}
 
-// const filtCourseList = courseList.filter(course => {
-//   if (course[1] === searchDept) {
-//     return course[0];
-//   };
-// });
+
+const filtCourseList = () => {
+  
+}
 
 const getDeptList = courseArr => {
   let deptList = new Set();
@@ -83,8 +77,6 @@ const getDeptList = courseArr => {
   return deptList
 }
 
-
-
 //COURSE FILTER PROMPT
 
 // let isValidDept = false;
@@ -92,7 +84,7 @@ const getDeptList = courseArr => {
 //   let searchDept = prompt('Which department are you looking for?');
 //   if (getDeptList(courseList).has(searchDept)) {
 //     isValidDept = true;
-//     alert(`Available courses: ` + filtCourseList);
+//     alert(`Available courses: ` );
 //     break;
 //   } else {
 //     searchDept;
