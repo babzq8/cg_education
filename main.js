@@ -62,12 +62,21 @@ const deptFilter = (courseArr, deptName) => {
       return course;
     }
   })
+  return filtCourseArr;
 }
 
 
-const filtCourseList = () => {
-  
+
+
+const filtCourseList = (filteredCourses) => {
+    let newCourseList = [];
+    for (let i = 0; i < filteredCourses.length; i++) {
+      newCourseList.push(filteredCourses[i][0]);
+    }
+    return newCourseList;
 }
+
+// console.log(filtCourseList(deptFilter(courseList, 'Comedy Writing')));
 
 const getDeptList = courseArr => {
   let deptList = new Set();
@@ -79,14 +88,14 @@ const getDeptList = courseArr => {
 
 //COURSE FILTER PROMPT
 
-// let isValidDept = false;
-// while (!isValidDept) {
-//   let searchDept = prompt('Which department are you looking for?');
-//   if (getDeptList(courseList).has(searchDept)) {
-//     isValidDept = true;
-//     alert(`Available courses: ` );
-//     break;
-//   } else {
-//     searchDept;
-//   }
-// }
+let isValidDept = false;
+while (!isValidDept) {
+  let searchDept = prompt('Which department are you looking for?');
+  if (getDeptList(courseList).has(searchDept)) {
+    isValidDept = true;
+    alert(`Available courses: ` );
+    break;
+  } else {
+    searchDept;
+  }
+}
