@@ -92,8 +92,9 @@ let isValidDept = false;
 while (!isValidDept) {
   let searchDept = prompt('Which department are you looking for?');
   if (getDeptList(courseList).has(searchDept)) {
+    let availCourse = filtCourseList(deptFilter(courseList, searchDept));
     isValidDept = true;
-    alert(`Available courses: ` );
+    alert(`Available courses: ` + availCourse);
     break;
   } else {
     searchDept;
