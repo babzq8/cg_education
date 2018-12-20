@@ -24,18 +24,19 @@ const addTeacherRating = (ratingsArr, newRating) => {
 //TEACHER RATING PROMPT
 
 
-// let isValidRating = false;
-// while (!isValidRating) {
-//   let addtlRating = prompt('We would like for you to review . Please enter a rating between 0.0-5.0');
-//   if ((addtlRating >= 0) && (addtlRating <= 5)) {
-//     isValidRating = true;
-//     addTeacherRating(teacherRating, addtlRating);
-//     alert(`Thanks for you review! ${teacherName}\'s average rating is now .` );
-//     break;
-//   } else {
-//     addtlRating;
-//   }
-// }
+let isValidRating = false;
+while (!isValidRating) {
+  let addtlRating = parseFloat(prompt('We would like for you to review . Please enter a rating between 0.0-5.0'));
+  if ((addtlRating >= 0) && (addtlRating <= 5)) {
+    isValidRating = true;
+    let newArrPrompt = addTeacherRating(teacherRating, addtlRating);
+    let newRatingPrompt = getRatingAvg(newArrPrompt);
+    alert(`Thanks for you review! ${teacherName}\'s average rating is now ${newRatingPrompt}.` );
+    break;
+  } else {
+    addtlRating;
+  }
+}
 
 
 //STUDENT PAGE DATA
