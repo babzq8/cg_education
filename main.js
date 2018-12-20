@@ -24,19 +24,19 @@ const addTeacherRating = (ratingsArr, newRating) => {
 //TEACHER RATING PROMPT
 
 
-let isValidRating = false;
-while (!isValidRating) {
-  let addtlRating = parseFloat(prompt('We would like for you to review . Please enter a rating between 0.0-5.0'));
-  if ((addtlRating >= 0) && (addtlRating <= 5)) {
-    isValidRating = true;
-    let newArrPrompt = addTeacherRating(teacherRating, addtlRating);
-    let newRatingPrompt = getRatingAvg(newArrPrompt);
-    alert(`Thanks for you review! ${teacherName}\'s average rating is now ${newRatingPrompt}.` );
-    break;
-  } else {
-    addtlRating;
-  }
-}
+// let isValidRating = false;
+// while (!isValidRating) {
+//   let addtlRating = parseFloat(prompt('We would like for you to review . Please enter a rating between 0.0-5.0'));
+//   if ((addtlRating >= 0) && (addtlRating <= 5)) {
+//     isValidRating = true;
+//     let newArrPrompt = addTeacherRating(teacherRating, addtlRating);
+//     let newRatingPrompt = getRatingAvg(newArrPrompt);
+//     alert(`Thanks for you review! ${teacherName}\'s average rating is now ${newRatingPrompt}.` );
+//     break;
+//   } else {
+//     addtlRating;
+//   }
+// }
 
 
 //STUDENT PAGE DATA
@@ -55,15 +55,25 @@ let courseName = 'Improv Comedy';
 let courseList = [['Improv Comedy', 'Comedy Writing'],['Acting 101','Comedy Writing'],['Singing 101','Comedy Writing'],['Dance 101','Comedy Writing'],['Basic HTML','Web Development'],['Intro to CSS','Web Development'],['Killing You with JavaScript','Web Development']];
 
 //COURSE FUNCTIONS
-const deptFilter = (courseArr, deptName) => {
-  let filtCourse = [];
-  for (let i=0; i< courseArr.length; i++) {
-    if (deptName === courseArr[i][1]) {
-      filtCourse.push(courseArr[i]);
-    }
-  }
-  return filtCourse;
-}
+
+/*
+/combine all of this
+*/
+// const deptFilter = (courseArr, deptName) => {
+//   let filtCourse = [];
+//   for (let i=0; i< courseArr.length; i++) {
+//     if (deptName === courseArr[i][1]) {
+//       filtCourse.push(courseArr[i]);
+//     }
+//   }
+//   return filtCourse;
+// }
+
+// const filtCourseList = courseList.filter(course => {
+//   if (course[1] === searchDept) {
+//     return course[0];
+//   };
+// });
 
 const getDeptList = courseArr => {
   let deptList = new Set();
@@ -73,9 +83,7 @@ const getDeptList = courseArr => {
   return deptList
 }
 
-const filtCourseList = courseList.filter(course => {
 
-})
 
 //COURSE FILTER PROMPT
 
@@ -84,7 +92,7 @@ const filtCourseList = courseList.filter(course => {
 //   let searchDept = prompt('Which department are you looking for?');
 //   if (getDeptList(courseList).has(searchDept)) {
 //     isValidDept = true;
-//     alert(`Available courses: `+ );
+//     alert(`Available courses: ` + filtCourseList);
 //     break;
 //   } else {
 //     searchDept;
