@@ -103,6 +103,15 @@ const getDeptList = courseArr => {
 //   }
 // }
 
+// STEP 3: WELCOMING SOME STUDENTS
+
+let welcomeCollegeStudent = function(collegeClass) {
+  alert(`Welcome ${collegeClass}!`);
+}
+
+let welcomeHsStudent = function(hsClass) {
+  alert(`You're still a ${hsClass} in High School!`);
+}
 
 //BEGINNING OF CLASS/GRADE FUNCTION
   let isValidYear = false;
@@ -112,9 +121,9 @@ const getDeptList = courseArr => {
     if ((passedYear >= currentDate.getFullYear()) && (typeof parseInt(passedYear) === 'number')) {
       isValidYear = true;
       if (passedYear <= (currentDate.getFullYear() + 4)) {
-        console.log('You are in college');
+        welcomeCollegeStudent('Freshman');
       } else {
-        console.log('You are in High School');
+        welcomeHsStudent('Freshman');
       }
       let isValidMonth = false;
       while (!isValidMonth) {
